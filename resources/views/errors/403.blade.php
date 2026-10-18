@@ -1,0 +1,1 @@
+<x-ui.error-page code="403" title="Akses tidak tersedia" description="Akun Anda tidak memiliki izin untuk membuka halaman ini. Minta pemilik toko memeriksa peran akun jika akses memang diperlukan." />

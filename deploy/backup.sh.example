@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+umask 077
+
+: "${APP_ROOT:?Isi APP_ROOT, contoh /var/www/nf-harapan-rumbai}"
+: "${BACKUP_ROOT:?Isi BACKUP_ROOT pada volume backup khusus}"
+: "${MYSQL_CREDENTIALS_FILE:?Isi path file MySQL client yang hanya dapat dibaca operator}"
+: "${DB_DATABASE:?Isi nama database production}"
+
+timestamp="$(date -u +%Y%m%dT%H%M%SZ)"
+staging="$(mktemp -d "${BACKUP_ROOT%/}/.nf-backup-${timestamp}.XXXXXX")"
+destination="${BACKUP_ROOT%/}/nf-harapan-${timestamp}"
+
+cleanup() { rm -rf -- "$staging"; }
+trap cleanup EXIT
+
+mysqldump --defaults-extra-file="$MYSQL_CREDENTIALS_FILE" \
+  --single-transaction --quick --routines --triggers --no-tablespaces \
+  "$DB_DATABASE" | gzip -9 > "$staging/database.sql.gz"
+
+tar -C "$APP_ROOT/storage/app" -czf "$staging/private-files.tar.gz" private
+sha256sum "$staging/database.sql.gz" "$staging/private-files.tar.gz" > "$staging/SHA256SUMS"
+
+mv -- "$staging" "$destination"
+trap - EXIT
+printf 'Backup selesai: %s\n' "$destination"
+
+# Retensi dilakukan oleh sistem backup/cron terpisah setelah backup baru
+# diverifikasi dan restore drill berkala berhasil. Jangan menghapus otomatis
+# dari skrip ini agar kegagalan konfigurasi tidak menghapus seluruh arsip.

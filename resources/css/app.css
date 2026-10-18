@@ -1,0 +1,223 @@
+@import '@fontsource-variable/geist';
+@import 'tailwindcss';
+@import '../../vendor/livewire/flux/dist/flux.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+
+@theme {
+    --font-sans: 'Geist Variable', 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
+
+    --color-cream-50: #fffdf8;
+    --color-cream-100: #fcfaf5;
+    --color-cream-200: #f3eee3;
+    --color-cream-300: #e8e0d2;
+    --color-cream-400: #d8cfbf;
+    --color-cream-500: #b9ae9b;
+
+    --color-zinc-50: #fffdf8;
+    --color-zinc-100: #fcfaf5;
+    --color-zinc-200: #f3eee3;
+    --color-zinc-300: #d8cfbf;
+    --color-zinc-400: #b9ae9b;
+    --color-zinc-500: #7e8277;
+    --color-zinc-600: #5d6458;
+    --color-zinc-700: #444a40;
+    --color-zinc-800: #30342d;
+    --color-zinc-900: #22251f;
+    --color-zinc-950: #171a16;
+
+    --color-accent: #315c48;
+    --color-accent-content: #315c48;
+    --color-accent-foreground: #fffdf8;
+
+    --color-success: #26734a;
+    --color-warning: #8a5a00;
+    --color-danger: #a9312a;
+    --color-info: #2e6380;
+}
+
+@layer base {
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-zinc-300, currentColor);
+    }
+
+    html {
+        color-scheme: light;
+        background: var(--color-cream-100);
+    }
+
+    body {
+        color: var(--color-zinc-900);
+        background: var(--color-cream-100);
+        font-feature-settings: 'ss01' 1, 'cv02' 1, 'cv03' 1;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 3px;
+    }
+}
+
+@layer components {
+    .ui-page {
+        @apply mx-auto flex w-full max-w-[1600px] flex-col gap-6 px-4 py-5 sm:px-6 lg:px-8 lg:py-7;
+    }
+
+    .ui-panel {
+        @apply rounded-[14px] border border-zinc-300 bg-cream-50 shadow-[0_1px_2px_rgba(34,37,31,0.04)];
+    }
+
+    .ui-panel-header {
+        @apply flex flex-col gap-3 border-b border-zinc-300 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5;
+    }
+
+    .ui-panel-body {
+        @apply p-4 sm:p-5;
+    }
+
+    .ui-toolbar {
+        @apply flex flex-col gap-3 rounded-[14px] border border-zinc-300 bg-cream-50 p-3 sm:flex-row sm:items-center;
+    }
+
+    .ui-label {
+        @apply mb-1.5 block text-sm font-medium text-zinc-800;
+    }
+
+    .ui-input {
+        @apply min-h-11 w-full rounded-[10px] border border-zinc-400 bg-white px-3 text-sm text-zinc-900 placeholder:text-zinc-500 hover:border-zinc-500 focus:border-accent focus:ring-2 focus:ring-accent/20;
+    }
+
+    .ui-textarea {
+        @apply min-h-28 w-full resize-y rounded-[10px] border border-zinc-400 bg-white px-3 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-500 hover:border-zinc-500 focus:border-accent focus:ring-2 focus:ring-accent/20;
+    }
+
+    .ui-select {
+        @apply min-h-11 w-full rounded-[10px] border border-zinc-400 bg-white px-3 text-sm text-zinc-900 hover:border-zinc-500 focus:border-accent focus:ring-2 focus:ring-accent/20;
+    }
+
+    .ui-btn {
+        @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-[10px] border border-zinc-400 bg-cream-50 px-4 text-sm font-semibold text-zinc-800 shadow-[0_1px_1px_rgba(34,37,31,0.04)] transition-[background-color,border-color,color,transform] duration-150 hover:border-zinc-500 hover:bg-cream-200 active:translate-y-px disabled:cursor-not-allowed disabled:opacity-50;
+    }
+
+    .ui-btn-primary {
+        @apply border-accent bg-accent text-white hover:border-[#244638] hover:bg-[#244638];
+    }
+
+    .ui-btn-danger {
+        @apply border-danger bg-danger text-white hover:border-[#852721] hover:bg-[#852721];
+    }
+
+    .ui-icon-btn {
+        @apply inline-flex size-11 items-center justify-center rounded-[10px] border border-zinc-400 bg-cream-50 text-zinc-700 transition-colors duration-150 hover:border-zinc-500 hover:bg-cream-200;
+    }
+
+    .ui-table-wrap {
+        @apply overflow-x-auto;
+    }
+
+    .ui-table {
+        @apply w-full min-w-[720px] border-collapse text-left text-sm;
+    }
+
+    .ui-table thead {
+        @apply bg-cream-200/70 text-xs font-semibold uppercase tracking-[0.04em] text-zinc-600;
+    }
+
+    .ui-table th {
+        @apply border-b border-zinc-300 px-4 py-3;
+    }
+
+    .ui-table td {
+        @apply border-b border-zinc-200 px-4 py-3.5 align-middle text-zinc-700;
+    }
+
+    .ui-table tbody tr:last-child td {
+        @apply border-b-0;
+    }
+
+    .ui-table tbody tr {
+        @apply hover:bg-cream-100;
+    }
+
+    .ui-kpi {
+        @apply rounded-[14px] border border-zinc-300 bg-cream-50 p-4 sm:p-5;
+    }
+
+    .ui-kpi-value {
+        @apply mt-2 text-2xl font-semibold tracking-[-0.03em] text-zinc-900;
+    }
+
+    .ui-help {
+        @apply mt-1.5 text-xs leading-relaxed text-zinc-600;
+    }
+
+    .ui-divider {
+        @apply border-t border-zinc-300;
+    }
+
+    .ui-skeleton {
+        @apply animate-pulse rounded-[8px] bg-zinc-200;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+[data-flux-field]:not(ui-radio, ui-checkbox) {
+    @apply grid gap-2;
+}
+
+[data-flux-sidebar-item] {
+    color: var(--color-zinc-600) !important;
+}
+
+[data-flux-sidebar-item]:hover {
+    color: var(--color-zinc-900) !important;
+}
+
+[data-flux-sidebar-item][data-current] {
+    color: var(--color-accent) !important;
+}
+
+[data-flux-sidebar-group] > div:first-child > div {
+    color: var(--color-zinc-600) !important;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 63.999rem) {
+    [data-flux-sidebar-on-mobile] [data-flux-sidebar-item] {
+        min-height: 44px;
+    }
+}
+
+[data-flux-label] {
+    @apply  !mb-0 !leading-tight;
+}
+
+input:focus[data-flux-control],
+textarea:focus[data-flux-control],
+select:focus[data-flux-control] {
+    @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+}
+
+/* \[:where(&)\]:size-4 {
+    @apply size-4;
+} */

@@ -1,0 +1,13 @@
+[program:nf-harapan-worker]
+process_name=%(program_name)s_%(process_num)02d
+command=php /var/www/nf-harapan-rumbai/artisan queue:work database --sleep=3 --tries=3 --backoff=5 --timeout=90
+directory=/var/www/nf-harapan-rumbai
+autostart=true
+autorestart=true
+stopasgroup=true
+killasgroup=true
+user=www-data
+numprocs=1
+redirect_stderr=true
+stdout_logfile=/var/log/supervisor/nf-harapan-worker.log
+stopwaitsecs=120

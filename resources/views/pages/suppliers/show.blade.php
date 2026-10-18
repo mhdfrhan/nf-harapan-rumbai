@@ -1,0 +1,21 @@
+<x-layouts::app :title="$supplier->name">
+    <div class="ui-page">
+        <x-ui.page-header eyebrow="Rincian pemasok" :title="$supplier->name" :description="$supplier->notes ?: 'Informasi pemasok dan riwayat penerimaan barang.'">
+            @if (auth()->user()->hasPermission('purchases.create'))<x-slot:actions><a class="ui-btn ui-btn-primary" href="{{ route('receipts.create') }}">Catat penerimaan</a></x-slot:actions>@endif
+        </x-ui.page-header>
+        @if(session('status'))<div class="ui-panel p-4 text-success">{{ session('status') }}</div>@endif
+        @if(auth()->user()->hasPermission('suppliers.manage'))<details class="ui-panel p-5"><summary class="cursor-pointer font-semibold text-accent">Ubah data pemasok</summary><form method="POST" action="{{ route('suppliers.update',$supplier) }}" class="mt-4 grid gap-4 sm:grid-cols-2">@csrf @method('PUT')<div><label class="ui-label">Nama</label><input name="name" class="ui-input" value="{{ $supplier->name }}" required></div><div><label class="ui-label">Telepon</label><input name="phone" class="ui-input" value="{{ $supplier->phone }}"></div><div><label class="ui-label">Alamat</label><textarea name="address" class="ui-textarea">{{ $supplier->address }}</textarea></div><div><label class="ui-label">Catatan</label><textarea name="notes" class="ui-textarea">{{ $supplier->notes }}</textarea></div><div><label class="ui-label">Status</label><select name="is_active" class="ui-select"><option value="1" @selected($supplier->is_active)>Aktif</option><option value="0" @selected(!$supplier->is_active)>Nonaktif</option></select></div><div class="self-end"><button class="ui-btn ui-btn-primary" type="submit">Simpan pemasok</button></div></form></details>@endif
+        <div class="grid gap-5 lg:grid-cols-[320px_minmax(0,1fr)]">
+            <aside class="space-y-5">
+                <section class="ui-panel p-5">
+                    <div class="flex items-center gap-3"><div class="flex size-12 items-center justify-center rounded-[10px] bg-[#e2ece6] font-bold text-accent">{{ str($supplier->name)->explode(' ')->map(fn ($word) => str($word)->substr(0, 1))->take(2)->join('') }}</div><div><p class="font-semibold text-zinc-900">Kontak pemasok</p><x-ui.status :value="$supplier->is_active ? 'Aktif' : 'Nonaktif'" /></div></div>
+                    <dl class="mt-5 space-y-4 text-sm"><div><dt class="text-zinc-500">Telepon</dt><dd class="mt-1 font-medium">{{ $supplier->phone ?: '-' }}</dd></div><div><dt class="text-zinc-500">Alamat</dt><dd class="mt-1 leading-6">{{ $supplier->address ?: '-' }}</dd></div><div><dt class="text-zinc-500">Catatan</dt><dd class="mt-1 leading-6">{{ $supplier->notes ?: '-' }}</dd></div></dl>
+                </section>
+                <section class="ui-panel p-5"><p class="text-sm text-zinc-600">Total sisa kewajiban</p><p class="ui-kpi-value">Rp{{ number_format($supplier->payables->sum('balance_rupiah'), 0, ',', '.') }}</p>@if (auth()->user()->hasPermission('payables.view'))<a href="{{ route('payables.index') }}" class="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-accent">Lihat semua kewajiban <flux:icon.arrow-right class="ml-2 size-4" /></a>@endif</section>
+            </aside>
+            <section class="ui-panel"><div class="ui-panel-header"><div><h2 class="font-semibold text-zinc-900">Riwayat penerimaan</h2><p class="mt-1 text-sm text-zinc-600">Maksimal 20 penerimaan terbaru dari pemasok ini.</p></div></div>
+                @if ($supplier->receipts->isEmpty())<div class="p-5 text-sm text-zinc-600">Belum ada penerimaan.</div>@else<div class="ui-table-wrap"><table class="ui-table"><thead><tr><th>Nomor</th><th>Tanggal</th><th>Total</th><th>Pembayaran</th><th>Status</th></tr></thead><tbody>@foreach ($supplier->receipts as $receipt)<tr><td><a class="font-semibold text-accent hover:underline" href="{{ route('receipts.show', $receipt) }}">{{ $receipt->number }}</a></td><td>{{ $receipt->received_on->translatedFormat('d M Y') }}</td><td>Rp{{ number_format($receipt->total_rupiah, 0, ',', '.') }}</td><td><x-ui.status :value="str($receipt->payment_state)->replace('_', ' ')->title()" /></td><td><x-ui.status :value="$receipt->status->value" /></td></tr>@endforeach</tbody></table></div>@endif
+            </section>
+        </div>
+    </div>
+</x-layouts::app>

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+umask 077
+
+: "${APP_ROOT:?Isi APP_ROOT untuk salinan aplikasi restore-test}"
+: "${BACKUP_DIR:?Isi direktori satu backup yang akan diuji}"
+: "${MYSQL_CREDENTIALS_FILE:?Isi path file MySQL client restore-test}"
+: "${RESTORE_DATABASE:?Isi nama database disposable berakhiran _restore_test}"
+
+case "$RESTORE_DATABASE" in
+  *_restore_test) ;;
+  *) printf 'RESTORE_DATABASE wajib berakhiran _restore_test.\n' >&2; exit 1 ;;
+esac
+
+(cd "$BACKUP_DIR" && sha256sum --check SHA256SUMS)
+gunzip -c "$BACKUP_DIR/database.sql.gz" | mysql --defaults-extra-file="$MYSQL_CREDENTIALS_FILE" "$RESTORE_DATABASE"
+
+files_staging="$(mktemp -d)"
+cleanup() { rm -rf -- "$files_staging"; }
+trap cleanup EXIT
+tar -C "$files_staging" -xzf "$BACKUP_DIR/private-files.tar.gz"
+test -d "$files_staging/private"
+
+cd "$APP_ROOT"
+DB_DATABASE="$RESTORE_DATABASE" php artisan store:check
+DB_DATABASE="$RESTORE_DATABASE" php artisan store:reconcile --fail-on-difference
+printf 'Restore drill database dan arsip bukti berhasil diverifikasi.\n'
