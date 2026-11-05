@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="Sequence Diagram Penerimaan dan Hutang Pemasok" id="diag_1">
+    <mxGraphModel dx="1390" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1390" pageHeight="780" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Pemilik / Petugas" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="35" y="35" width="150" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Halaman Pengadaan &amp; Hutang" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="215" y="35" width="150" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Pengendali Pengadaan" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="410" y="35" width="150" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Layanan Penerimaan Barang" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="605" y="35" width="150" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Layanan Buku Besar Stok" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="805" y="35" width="150" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Layanan Hutang Pemasok" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="35" width="150" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Basis Data Sistem" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1205" y="35" width="150" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="1: Mengisi data penerimaan barang, pembayaran awal, dan jatuh tempo" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="115" as="sourcePoint" />
+            <mxPoint x="290" y="115" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="2: Mengirimkan permintaan pencatatan barang masuk" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="165" as="sourcePoint" />
+            <mxPoint x="485" y="165" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="3: Memeriksa rincian barang dan menghitung konversi satuan dasar" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485" y="215" as="sourcePoint" />
+            <mxPoint x="680" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="4: Menyimpan nota penerimaan dan rincian barang masuk" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="265" as="sourcePoint" />
+            <mxPoint x="1280" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="5: Mengajukan penambahan saldo persediaan barang" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="315" as="sourcePoint" />
+            <mxPoint x="880" y="315" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="6: Mencatat mutasi barang masuk dan menambah saldo stok gudang" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="365" as="sourcePoint" />
+            <mxPoint x="1280" y="365" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" value="7: Memeriksa selisih pembayaran awal terhadap nilai total tagihan nota" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="415" as="sourcePoint" />
+            <mxPoint x="1080" y="415" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" value="8: Menyimpan catatan hutang pemasok, sisa tagihan, dan jatuh tempo" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="465" as="sourcePoint" />
+            <mxPoint x="1280" y="465" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17" value="9: Mengonfirmasi penerimaan barang dan status hutang pemasok" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;strokeColor=#000000;fontColor=#000000;fontSize=10;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="515" as="sourcePoint" />
+            <mxPoint x="290" y="515" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="18" value="10: Mengisi formulir pembayaran cicilan/pelunasan dan bukti transfer" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="570" as="sourcePoint" />
+            <mxPoint x="290" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="19" value="11: Mengirimkan data pembayaran hutang pemasok" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="620" as="sourcePoint" />
+            <mxPoint x="1080" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="20" value="12: Menyimpan riwayat pembayaran dan memperbarui sisa tagihan hutang" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;strokeColor=#000000;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="668" as="sourcePoint" />
+            <mxPoint x="1280" y="668" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" value="13: Menampilkan status hutang terbaru (Cicilan atau Lunas)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;strokeColor=#000000;fontColor=#000000;fontSize=10;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="712" as="sourcePoint" />
+            <mxPoint x="110" y="712" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="Formulir Pengelolaan Barang, Satuan Konversi, dan Tingkatan Harga" id="diag_1">
+    <mxGraphModel dx="1080" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1080" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Peramban Web - Sistem Informasi Penjualan &amp; Persediaan Toko NF Harapan Rumbai" style="swimlane;startSize=32;fillColor=#f5f5f5;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="1040" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Menu Navigasi" style="swimlane;startSize=28;fillColor=#f5f5f5;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="62" width="195" height="608" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="   Ringkasan Toko" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="   Kasir Penjualan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="142" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="   Riwayat Penjualan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="184" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="▸ Katalog Barang" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="226" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="   Kategori &amp; Satuan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="268" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="   Saldo &amp; Mutasi Stok" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="310" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="   Penyesuaian Stok" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="352" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="   Data Pemasok" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="394" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="   Penerimaan Barang" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="436" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="   Hutang Pemasok" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="478" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="   Laporan Operasional" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="520" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="   Pengguna &amp; Profil Toko" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="562" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="   Jejak Aktivitas" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="604" width="175" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="Formulir Pengelolaan Barang, Satuan Konversi, dan Tingkatan Harga" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=13;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="235" y="62" width="815" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="Bagian 1: Identitas Barang Dagangan &amp; Satuan Dasar Penyimpanan Stok" style="swimlane;startSize=26;fillColor=#f5f5f5;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;align=left;spacingLeft=10;html=1;" vertex="1" parent="1">
+          <mxGeometry x="235" y="114" width="815" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="Kode Barang" style="text;strokeColor=none;fillColor=none;fontColor=#000000;fontStyle=1;fontSize=10;align=left;html=1;" vertex="1" parent="1">
+          <mxGeometry x="247" y="146" width="150" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="SMB-001" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="247" y="166" width="150" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="Nomor Kode Batang" style="text;strokeColor=none;fillColor=none;fontColor=#000000;fontStyle=1;fontSize=10;align=left;html=1;" vertex="1" parent="1">
+          <mxGeometry x="409" y="146" width="185" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="8991234567890" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="409" y="166" width="185" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="Nama Lengkap Barang Dagangan" style="text;strokeColor=none;fillColor=none;fontColor=#000000;fontStyle=1;fontSize=10;align=left;html=1;" vertex="1" parent="1">
+          <mxGeometry x="606" y="146" width="432" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="Gula Pasir Putih Curah" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="606" y="166" width="432" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="Kategori Barang" style="text;strokeColor=none;fillColor=none;fontColor=#000000;fontStyle=1;fontSize=10;align=left;html=1;" vertex="1" parent="1">
+          <mxGeometry x="247" y="196" width="190" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="Sembako ▾" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="247" y="216" width="190" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="Satuan Dasar Stok" style="text;strokeColor=none;fillColor=none;fontColor=#000000;fontStyle=1;fontSize=10;align=left;html=1;" vertex="1" parent="1">
+          <mxGeometry x="449" y="196" width="200" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="Kilogram (KG) ▾" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="449" y="216" width="200" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="Batas Stok Menipis" style="text;strokeColor=none;fillColor=none;fontColor=#000000;fontStyle=1;fontSize=10;align=left;html=1;" vertex="1" parent="1">
+          <mxGeometry x="661" y="196" width="175" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="20 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="661" y="216" width="175" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="Status Katalog Kasir" style="text;strokeColor=none;fillColor=none;fontColor=#000000;fontStyle=1;fontSize=10;align=left;html=1;" vertex="1" parent="1">
+          <mxGeometry x="848" y="196" width="190" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="[x] Barang Aktif" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="848" y="216" width="190" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="Bagian 2: Tabel Daftar Satuan Jual &amp; Nilai Konversi terhadap Satuan Dasar" style="swimlane;startSize=26;fillColor=#f5f5f5;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;align=left;spacingLeft=10;html=1;" vertex="1" parent="1">
+          <mxGeometry x="235" y="258" width="815" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="No" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="247" y="292" width="45" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="Satuan Ukur" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="292" y="292" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="Label Kemasan Jual" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="432" y="292" width="205" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="Nilai Konversi ke Satuan Dasar" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=right;" vertex="1" parent="1">
+          <mxGeometry x="637" y="292" width="205" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="38" value="Satuan Utama Kasir" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="842" y="292" width="120" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="39" value="Aksi" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="962" y="292" width="76" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="40" value="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="247" y="318" width="45" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="41" value="Kilogram (KG)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="292" y="318" width="140" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="42" value="Eceran 1 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="432" y="318" width="205" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="1 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=right;" vertex="1" parent="1">
+          <mxGeometry x="637" y="318" width="205" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="44" value="[x] Utama" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="842" y="318" width="120" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="45" value="Ubah" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="962" y="318" width="76" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="46" value="2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="247" y="342" width="45" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="47" value="Kilogram (KG)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="292" y="342" width="140" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="48" value="Takaran 1/2 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="432" y="342" width="205" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="49" value="0,5 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=right;" vertex="1" parent="1">
+          <mxGeometry x="637" y="342" width="205" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="50" value="[ ] Tidak" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="842" y="342" width="120" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="51" value="Ubah" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="962" y="342" width="76" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="52" value="3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="247" y="366" width="45" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="53" value="Kilogram (KG)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="292" y="366" width="140" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="54" value="Takaran 1/4 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="432" y="366" width="205" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="55" value="0,25 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=right;" vertex="1" parent="1">
+          <mxGeometry x="637" y="366" width="205" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="56" value="[ ] Tidak" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="842" y="366" width="120" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="57" value="Ubah" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="962" y="366" width="76" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="58" value="4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="247" y="390" width="45" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="59" value="Karung (SAK)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="292" y="390" width="140" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="60" value="Karung 50 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="432" y="390" width="205" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="61" value="50 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=right;" vertex="1" parent="1">
+          <mxGeometry x="637" y="390" width="205" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="62" value="[ ] Tidak" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="842" y="390" width="120" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="63" value="Ubah" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="962" y="390" width="76" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="64" value="Bagian 3: Tabel Pengaturan Harga Eceran dan Harga Grosir per Satuan Jual" style="swimlane;startSize=26;fillColor=#f5f5f5;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;align=left;spacingLeft=10;html=1;" vertex="1" parent="1">
+          <mxGeometry x="235" y="434" width="815" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="65" value="No" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="247" y="468" width="45" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="66" value="Kemasan Satuan Jual" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="292" y="468" width="185" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="67" value="Tingkatan Harga" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="477" y="468" width="145" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="68" value="Syarat Beli Minimum" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="622" y="468" width="155" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="69" value="Harga Jual Satuan (Rp)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=right;" vertex="1" parent="1">
+          <mxGeometry x="777" y="468" width="185" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="70" value="Aksi" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="962" y="468" width="76" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="71" value="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="247" y="494" width="45" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="72" value="Eceran 1 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="292" y="494" width="185" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="73" value="Harga Eceran" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="477" y="494" width="145" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="74" value="Minimal 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="622" y="494" width="155" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="75" value="Rp 18.000" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=right;" vertex="1" parent="1">
+          <mxGeometry x="777" y="494" width="185" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="76" value="Ubah" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="962" y="494" width="76" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="77" value="2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="247" y="519" width="45" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="78" value="Eceran 1 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="292" y="519" width="185" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="79" value="Harga Grosir" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="477" y="519" width="145" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="80" value="Minimal 10" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="622" y="519" width="155" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="81" value="Rp 17.000" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=right;" vertex="1" parent="1">
+          <mxGeometry x="777" y="519" width="185" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="82" value="Ubah" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="962" y="519" width="76" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="83" value="3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="247" y="544" width="45" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="84" value="Takaran 1/2 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="292" y="544" width="185" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="85" value="Harga Eceran" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="477" y="544" width="145" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="86" value="Minimal 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="622" y="544" width="155" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="87" value="Rp 9.500" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=right;" vertex="1" parent="1">
+          <mxGeometry x="777" y="544" width="185" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="88" value="Ubah" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="962" y="544" width="76" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="89" value="4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="247" y="569" width="45" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="90" value="Takaran 1/4 kg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="292" y="569" width="185" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="91" value="Harga Eceran" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="477" y="569" width="145" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="92" value="Minimal 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="622" y="569" width="155" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="93" value="Rp 5.000" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=right;" vertex="1" parent="1">
+          <mxGeometry x="777" y="569" width="185" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="94" value="Ubah" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=0;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="962" y="569" width="76" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="95" value="+ Tambah Satuan Jual" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="235" y="624" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="96" value="+ Tambah Aturan Harga" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="442" y="624" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="97" value="BATAL" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="705" y="624" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="98" value="SIMPAN DATA BARANG" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="857" y="624" width="193" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

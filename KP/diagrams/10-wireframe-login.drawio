@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="Wireframe Halaman Masuk Sistem" id="diag_1">
+    <mxGraphModel dx="1000" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="620" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Peramban Web - Halaman Masuk Sistem Toko NF Harapan Rumbai" style="swimlane;startSize=32;fillColor=#f5f5f5;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="920" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Formulir Masuk Pengguna Internal" style="swimlane;startSize=32;fillColor=#f5f5f5;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="95" width="400" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="TOKO GROSIR &amp; ECERAN NF HARAPAN RUMBAI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="330" y="145" width="340" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Nama Pengguna atau Alamat Surel" style="text;strokeColor=none;fillColor=none;fontColor=#000000;align=left;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="202" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="kasir_pagi" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="224" width="340" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Kata Sandi" style="text;strokeColor=none;fillColor=none;fontColor=#000000;align=left;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="274" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="••••••••••••" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="296" width="340" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="[x] Ingat Sesi Masuk pada Perangkat Ini" style="text;strokeColor=none;fillColor=none;fontColor=#000000;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="330" y="344" width="340" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="MASUK KE SISTEM" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ebebeb;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="330" y="382" width="340" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="Area Pesan Peringatan Kesalahan Kata Sandi / Status Akun" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=10;dashed=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="330" y="440" width="340" height="64" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
