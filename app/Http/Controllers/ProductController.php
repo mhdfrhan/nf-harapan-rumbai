@@ -30,7 +30,14 @@ class ProductController extends Controller
 
     public function create(): View
     {
-        return view('pages.catalog.products.form', ['product' => null, 'categories' => Category::where('is_active', true)->orderBy('name')->get(), 'units' => Unit::where('is_active', true)->orderBy('name')->get()]);
+        $generatedSku = $this->generateNextSku();
+
+        return view('pages.catalog.products.form', [
+            'product' => null,
+            'generatedSku' => $generatedSku,
+            'categories' => Category::where('is_active', true)->orderBy('name')->get(),
+            'units' => Unit::where('is_active', true)->orderBy('name')->get(),
+        ]);
     }
 
     public function edit(Product $product): View
@@ -53,6 +60,11 @@ class ProductController extends Controller
     private function persist(Request $request, ?Product $product, AuditLogger $audit, ProductPriceManager $priceManager): RedirectResponse
     {
         $request->user()->hasPermission($product ? 'products.update' : 'products.create') || abort(403);
+        if (! $product && blank($request->input('sku'))) {
+            $request->merge(['sku' => $this->generateNextSku()]);
+        } elseif ($product && blank($request->input('sku'))) {
+            $request->merge(['sku' => $product->sku]);
+        }
         $data = $request->validate(['name' => ['required', 'string', 'max:180'], 'sku' => ['required', 'string', 'max:64', Rule::unique('products')->ignore($product)], 'barcode' => ['nullable', 'string', 'max:100', Rule::unique('products')->ignore($product)], 'category_id' => ['required', 'exists:categories,id'], 'base_unit_id' => ['required', 'exists:units,id'], 'description' => ['nullable', 'string', 'max:1000'], 'low_stock_threshold' => ['required', 'decimal:0,4', 'min:0'], 'conversion_to_base' => ['required', 'decimal:0,4', 'gt:0'], 'unit_label' => ['required', 'string', 'max:80'], 'retail_price' => ['required'], 'wholesale_price' => ['nullable'], 'wholesale_minimum' => ['nullable', 'decimal:0,4', 'gt:0'], 'is_active' => ['nullable', 'boolean'], 'lock_version' => [$product ? 'required' : 'nullable', 'integer', 'min:1']]);
         $before = $product?->only(['name', 'sku', 'category_id', 'base_unit_id', 'is_active']) ?? [];
         if ($product) {
@@ -71,7 +83,7 @@ class ProductController extends Controller
             } else {
                 $product = new Product;
             }
-            $product->fill(['name' => $data['name'], 'sku' => Str::upper($data['sku']), 'barcode' => $data['barcode'] ?: null, 'category_id' => $data['category_id'], 'base_unit_id' => $data['base_unit_id'], 'description' => $data['description'] ?? null, 'low_stock_threshold' => $data['low_stock_threshold'], 'allows_negative_stock' => false, 'is_active' => (bool) ($data['is_active'] ?? true), 'lock_version' => $isEditing ? $product->lock_version + 1 : 1]);
+            $product->fill(['name' => $data['name'], 'sku' => Str::upper($data['sku']), 'barcode' => ($data['barcode'] ?? null) ?: null, 'category_id' => $data['category_id'], 'base_unit_id' => $data['base_unit_id'], 'description' => $data['description'] ?? null, 'low_stock_threshold' => $data['low_stock_threshold'], 'allows_negative_stock' => false, 'is_active' => (bool) ($data['is_active'] ?? true), 'lock_version' => $isEditing ? $product->lock_version + 1 : 1]);
             $product->save();
             $unit = $product->saleUnits()->where('is_default_sale_unit', true)->first() ?? $product->saleUnits()->make();
             if ($unit->exists) {
@@ -113,5 +125,20 @@ class ProductController extends Controller
         usort($snapshot, fn (array $left, array $right): int => [$left['unit'], $left['type']] <=> [$right['unit'], $right['type']]);
 
         return $snapshot;
+    }
+
+    private function generateNextSku(): string
+    {
+        $maxId = (int) Product::query()->max('id');
+        $nextNumber = $maxId + 1;
+        do {
+            $sku = sprintf('PRD-%04d', $nextNumber);
+            $exists = Product::query()->where('sku', $sku)->exists();
+            if ($exists) {
+                $nextNumber++;
+            }
+        } while ($exists);
+
+        return $sku;
     }
 }

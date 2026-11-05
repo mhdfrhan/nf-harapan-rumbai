@@ -175,11 +175,11 @@ new #[Title('Pengaturan keamanan')] class extends Component {
 
     <flux:heading class="sr-only">{{ __('Security settings') }}</flux:heading>
 
-    <x-pages::settings.layout :heading="__('Update password')" :subheading="__('Ensure your account is using a long, random password to stay secure')">
+    <x-pages::settings.layout :heading="__('Ganti Kata Sandi Akun')" :subheading="__('Gunakan kata sandi yang kuat untuk menjaga keamanan akses sistem kasir toko')">
         <form method="POST" wire:submit="updatePassword" class="mt-6 space-y-6">
             <flux:input
                 wire:model="current_password"
-                :label="__('Current password')"
+                :label="__('Kata Sandi Saat Ini')"
                 type="password"
                 required
                 autocomplete="current-password"
@@ -187,7 +187,7 @@ new #[Title('Pengaturan keamanan')] class extends Component {
             />
             <flux:input
                 wire:model="password"
-                :label="__('New password')"
+                :label="__('Kata Sandi Baru (Min. 12 Karakter)')"
                 type="password"
                 required
                 autocomplete="new-password"
@@ -196,7 +196,7 @@ new #[Title('Pengaturan keamanan')] class extends Component {
             />
             <flux:input
                 wire:model="password_confirmation"
-                :label="__('Confirm password')"
+                :label="__('Ulangi Kata Sandi Baru')"
                 type="password"
                 required
                 autocomplete="new-password"
@@ -206,7 +206,7 @@ new #[Title('Pengaturan keamanan')] class extends Component {
 
             <div class="flex items-center gap-4">
                 <flux:button variant="primary" type="submit" data-test="update-password-button">
-                    {{ __('Save') }}
+                    {{ __('Simpan Kata Sandi Baru') }}
                 </flux:button>
             </div>
         </form>

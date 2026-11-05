@@ -26,7 +26,14 @@ class ProcurementController extends Controller
 
     public function create(): View
     {
-        return view('pages.receipts.form', ['suppliers' => Supplier::where('is_active', true)->orderBy('name')->get(), 'products' => Product::with(['saleUnits' => fn ($q) => $q->where('is_active', true)])->where('is_active', true)->orderBy('name')->get(), 'idempotencyKey' => (string) Str::uuid()]);
+        $defaultDocumentNumber = 'NOTA-'.now()->format('Ymd').'-'.sprintf('%04d', GoodsReceipt::query()->whereDate('created_at', today())->count() + 1);
+
+        return view('pages.receipts.form', [
+            'suppliers' => Supplier::where('is_active', true)->orderBy('name')->get(),
+            'products' => Product::with(['saleUnits' => fn ($q) => $q->where('is_active', true)])->where('is_active', true)->orderBy('name')->get(),
+            'idempotencyKey' => (string) Str::uuid(),
+            'defaultDocumentNumber' => $defaultDocumentNumber,
+        ]);
     }
 
     public function store(Request $request, PostGoodsReceipt $action, DocumentStorage $documents): RedirectResponse

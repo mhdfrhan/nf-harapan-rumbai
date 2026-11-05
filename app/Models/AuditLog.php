@@ -24,4 +24,36 @@ class AuditLog extends Model
     {
         return $this->belongsTo(User::class, 'actor_id');
     }
+
+    public function getEventLabelAttribute(): string
+    {
+        return match ($this->event) {
+            'sale.posted' => 'Transaksi Penjualan Kasir Disimpan',
+            'sale.voided' => 'Transaksi Penjualan Dibatalkan (Void)',
+            'auth.login.succeeded' => 'Pengguna Berhasil Masuk',
+            'auth.login.failed' => 'Gagal Masuk (Kata Sandi Salah)',
+            'auth.logout' => 'Pengguna Keluar Sistem',
+            'receipt.posted' => 'Penerimaan Barang Masuk Disimpan',
+            'catalog.product_created', 'product.created' => 'Produk Baru Ditambahkan',
+            'catalog.product_updated', 'product.updated' => 'Data Produk Diperbarui',
+            'stock.adjusted' => 'Koreksi Stok Fisik (Penyesuaian)',
+            'payable.payment_posted' => 'Pembayaran Hutang Pemasok Dicatat',
+            'payable.payment_voided' => 'Pembayaran Hutang Dibatalkan',
+            'user.role_changed' => 'Peran Pengguna Diubah',
+            'report.exported' => 'Laporan Diunduh (Ekspor CSV)',
+            'document.downloaded' => 'Berkas Bukti Nota Diunduh',
+            default => str($this->event)->replace('.', ' - ')->headline()->toString(),
+        };
+    }
+
+    public function getEventBadgeColorAttribute(): string
+    {
+        return match ($this->event) {
+            'sale.posted', 'auth.login.succeeded', 'payable.payment_posted' => 'emerald',
+            'receipt.posted', 'catalog.product_created', 'product.created', 'stock.adjusted' => 'blue',
+            'catalog.product_updated', 'product.updated', 'user.role_changed' => 'amber',
+            'sale.voided', 'auth.login.failed', 'payable.payment_voided' => 'rose',
+            default => 'zinc',
+        };
+    }
 }
